@@ -1,0 +1,33 @@
+.item {
+  background-color: rgba(0, 60, 132, 0.03);
+  border-radius: 6px;
+  margin: 8px 0;
+  padding: 16px;
+}
+
+.title {
+  color: rgb(0, 60, 132);
+  display: flex;
+  flex-flow: row nowrap;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.title > span {
+  color: rgb(132, 60, 60);
+  cursor: pointer;
+  font-weight: normal;
+  margin-left: auto;
+}
+
+.title > span:hover {
+  border-bottom: 1px dotted rgb(132, 60, 60);
+}
+
+.categories {
+  display: flex;
+  flex-flow: row wrap;
+  margin: -4px;
+  margin-top: 20px;
+}

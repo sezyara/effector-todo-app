@@ -1,0 +1,10 @@
+.item {
+  display: flex;
+  flex-flow: column;
+  margin-bottom: 16px;
+}
+
+.label {
+  font-size: 12px;
+  margin-bottom: 8px;
+}

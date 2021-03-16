@@ -1,0 +1,21 @@
+.header {
+  background-color: rgba(0, 60, 132, 0.05);
+  height: 60px;
+}
+
+.container {
+  align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
+  height: 60px;
+  margin: 0 auto;
+  width: 860px;
+}
+
+.title {
+
+}
+
+.action {
+  margin-left: auto;
+}

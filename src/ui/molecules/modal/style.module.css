@@ -1,0 +1,47 @@
+.wrapper {
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.45);
+  display: flex;
+  justify-content: center;
+}
+
+.overlay,
+.wrapper {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.modal {
+  background-color: white;
+  border-radius: 6px;
+  position: relative;
+  width: 430px;
+}
+
+.body {
+  font-size: 14px;
+  padding: 16px;
+}
+
+.footer {
+  justify-content: flex-end;
+  padding: 10px 16px;
+  display: flex;
+}
+
+.footer > *:first-child {
+  margin-right: 8px;
+}
+
+.title {
+  align-items: center;
+  display: flex;
+  font-size: 14px;
+  font-weight: bold;
+  height: 50px;
+  justify-content: center;
+  padding: 0 16px;
+}
