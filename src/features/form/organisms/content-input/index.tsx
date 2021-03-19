@@ -13,7 +13,7 @@ export const ContentInput = () => {
 
   return (
     <FormItem label='Content'>
-      <Input
+      <Input.TextArea
         onChange={onChange}
         value={value}
       />

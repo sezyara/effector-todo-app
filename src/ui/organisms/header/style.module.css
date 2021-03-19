@@ -16,6 +16,10 @@
 
 }
 
-.action {
+.actions {
   margin-left: auto;
+}
+
+.add {
+  font-size: 16px;
 }

@@ -1,24 +1,25 @@
 import { FC } from 'react'
+import cn from 'classnames'
 import classes from './style.module.css'
 
 export interface IButtonProps {
+  className?: string
   onClick?: () => void
-  type?: 'secondary'
+  secondary?: boolean
 }
 
 export const Button: FC<IButtonProps> = ({
+  className,
   children,
   onClick,
-  type
-}) => {
-  const buttonCls = classes.button + (type === 'secondary' ? ` ${classes.secondary}` : '')
-
-  return (
-    <button
-      className={buttonCls}
-      onClick={onClick}
-    >
-      {children}
-    </button>
-  )
-}
+  secondary = false
+}) => (
+  <button
+    className={cn(classes.button, className, {
+      [classes.secondary]: !!secondary
+    })}
+    onClick={onClick}
+  >
+    {children}
+  </button>
+)

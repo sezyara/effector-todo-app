@@ -1,4 +1,4 @@
-import { useCallback } from 'react'
+import { useCallback, useMemo } from 'react'
 import { ITodo } from 'types'
 import { CategoryItem } from '../../atoms'
 import { deleteRecord } from '../../store'
@@ -21,27 +21,41 @@ export const Item = ({
     [id]
   )
 
+  const renderCategory = useMemo(
+    () => category
+      .split(', ')
+      .map((item, key) => (
+        <CategoryItem key={key}>
+          {item}
+        </CategoryItem>
+      )),
+    [category]
+  )
+
   return (
     <div className={classes.item}>
       <div className={classes.title}>
         {title}
 
-        <span onClick={onClick}>
+        <span
+          className={classes.action}
+          onClick={onClick}
+        >
           Remove
         </span>
       </div>
 
-      <div className={classes.conetnt}>
-        {content}
-      </div>
+      {!!content && (
+        <div className={classes.content}>
+          {content}
+        </div>
+      )}
 
-      <div className={classes.categories}>
-        {category.split(', ').map((item, key) => (
-          <CategoryItem key={key}>
-            {item}
-          </CategoryItem>
-        ))}
-      </div>
+      {!!category.length && (
+        <div className={classes.categories}>
+          {renderCategory}
+        </div>
+      )}
     </div>
   )
 }

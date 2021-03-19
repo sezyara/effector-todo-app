@@ -4,10 +4,10 @@ import { Button } from 'ui'
 import classes from './style.module.css'
 
 export interface IHeaderProps {
-  title: string
+  title?: string
 }
 
-export const Header = ({ title }: IHeaderProps) => {
+export const Header = ({ title = 'TODO app' }: IHeaderProps) => {
   const onActionClick = useCallback(
     () => setFormModalVisibility(true),
     []
@@ -20,8 +20,11 @@ export const Header = ({ title }: IHeaderProps) => {
           {title}
         </div>
 
-        <div className={classes.action}>
-          <Button onClick={onActionClick}>
+        <div className={classes.actions}>
+          <Button
+            className={classes.add}
+            onClick={onActionClick}
+          >
             +
           </Button>
         </div>

@@ -1,11 +1,11 @@
 import { Form } from 'features/form'
 import { List } from 'features/list'
-import { BaseTempalate } from 'ui'
+import { BaseTemplate } from 'ui'
 
 export const HomePage = () => (
-  <BaseTempalate>
+  <BaseTemplate>
     <Form />
 
     <List />
-  </BaseTempalate>
+  </BaseTemplate>
 )

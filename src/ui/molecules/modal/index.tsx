@@ -41,7 +41,7 @@ export const Modal: FC<IModalProps> = ({
         <div className={classes.footer}>
           <Button
             onClick={onCancel}
-            type='secondary'
+            secondary
           >
             {cancelButtonText || 'Cancel'}
           </Button>

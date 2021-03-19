@@ -2,9 +2,9 @@ import { Fragment, FC } from 'react'
 import { Header } from '../../organisms'
 import classes from './style.module.css'
 
-export const BaseTempalate: FC = ({ children }) => (
+export const BaseTemplate: FC = ({ children }) => (
   <Fragment>
-    <Header title='TODO app' />
+    <Header />
 
     <div className={classes.content}>
       {children}

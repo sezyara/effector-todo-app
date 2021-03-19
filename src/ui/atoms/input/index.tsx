@@ -23,3 +23,25 @@ export const Input = ({
     />
   )
 }
+
+export const TextArea = ({
+  onChange,
+  value
+}: IInputProps) => {
+  const wrappedOnChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
+    if (onChange) onChange(e.target.value)
+  }
+
+  return (
+    <textarea
+      className={classes.input}
+      onChange={wrappedOnChange}
+      rows={5}
+      value={value}
+    />
+  )
+}
+
+Input.TextArea = TextArea
+
+export default Input
